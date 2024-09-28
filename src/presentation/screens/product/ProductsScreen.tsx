@@ -3,6 +3,7 @@ import React from 'react';
 import { View,Text,FlatList } from 'react-native';
 import { globalStyles } from '../../styles/globalStyles';
 import { PrimaryButton } from '../../components';
+import { useNavigation } from '@react-navigation/native';
 
 const Products = [
   {
@@ -23,6 +24,7 @@ const Products = [
 ];
 
 export const ProductsScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={globalStyles.container}>
         <Text style={{marginBottom:10,fontSize:30}}>Products</Text>
@@ -35,6 +37,8 @@ export const ProductsScreen = () => {
         />
 
         <Text style={{marginBottom:10,fontSize:30}}>Settings</Text>
+
+        <PrimaryButton label="Setting" onPress={()=> navigation.navigate('SettingScreen' as never)}/>
     </View>
   );
 };
