@@ -1,4 +1,4 @@
 export interface PrimaryButtonProps {
-    name:string;
+    label:string;
     onPress:()=> void
 }
