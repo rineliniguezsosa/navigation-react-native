@@ -1,13 +1,14 @@
 import React from 'react';
 import { View,Text,Pressable } from 'react-native';
+import { globalStyles } from '../../styles/globalStyles';
 
 export const HomeScreen = () => {
   return (
-    <View>
+    <View style={globalStyles.container}>
         <Text>HomeScreen</Text>
 
-        <Pressable>
-            <Text>Ir a productos</Text>
+        <Pressable style={globalStyles.primaryButton}>
+            <Text style={globalStyles.buttonText}>Ir a productos</Text>
         </Pressable>
     </View>
   );
