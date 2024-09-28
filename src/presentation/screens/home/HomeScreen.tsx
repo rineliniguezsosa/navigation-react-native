@@ -2,15 +2,16 @@ import React from 'react';
 import { View,Text } from 'react-native';
 import { globalStyles } from '../../styles/globalStyles';
 import { PrimaryButton } from '../../components';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation,NavigationProp } from '@react-navigation/native';
+import { RootStackParamList } from '../../../types/interfaces'
 
 export const HomeScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <View style={globalStyles.container}>
         <Text>HomeScreen</Text>
 
-        <PrimaryButton label="Productos" onPress={()=> navigation.navigate('ProductsScreen' as never)}/>
+        <PrimaryButton label="Productos" onPress={()=> navigation.navigate('ProductsScreen')}/>
     </View>
   );
 };
