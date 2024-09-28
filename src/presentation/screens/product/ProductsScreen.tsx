@@ -3,7 +3,8 @@ import React from 'react';
 import { View,Text,FlatList } from 'react-native';
 import { globalStyles } from '../../styles/globalStyles';
 import { PrimaryButton } from '../../components';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation,NavigationProp } from '@react-navigation/native';
+import { RootStackParamList } from '../../../types/interfaces';
 
 const Products = [
   {
@@ -24,7 +25,7 @@ const Products = [
 ];
 
 export const ProductsScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <View style={globalStyles.container}>
         <Text style={{marginBottom:10,fontSize:30}}>Products</Text>
@@ -32,13 +33,13 @@ export const ProductsScreen = () => {
         <FlatList
           data={Products}
           renderItem={({item})=>(
-            <PrimaryButton label={item.name} onPress={()=> navigation.navigate('ProductScreen' as never)} />
+            <PrimaryButton label={item.name} onPress={()=> navigation.navigate('ProductScreen',{id:item.id,name:item.name})} />
           )}
         />
 
         <Text style={{marginBottom:10,fontSize:30}}>Settings</Text>
 
-        <PrimaryButton label="Setting" onPress={()=> navigation.navigate('SettingScreen' as never)}/>
+        <PrimaryButton label="Setting" onPress={()=> navigation.navigate('SettingScreen')}/>
     </View>
   );
 };
