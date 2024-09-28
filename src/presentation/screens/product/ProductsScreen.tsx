@@ -32,7 +32,7 @@ export const ProductsScreen = () => {
         <FlatList
           data={Products}
           renderItem={({item})=>(
-            <PrimaryButton label={item.name} onPress={()=> {}} />
+            <PrimaryButton label={item.name} onPress={()=> navigation.navigate('ProductScreen' as never)} />
           )}
         />
 
