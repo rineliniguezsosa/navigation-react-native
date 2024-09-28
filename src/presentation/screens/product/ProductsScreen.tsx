@@ -33,6 +33,8 @@ export const ProductsScreen = () => {
             <PrimaryButton label={item.name} onPress={()=> {}} />
           )}
         />
+
+        <Text style={{marginBottom:10,fontSize:30}}>Settings</Text>
     </View>
   );
 };
