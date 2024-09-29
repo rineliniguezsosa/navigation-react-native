@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import { DrawerActions, useNavigation } from '@react-navigation/native';
 import { Pressable, Text } from 'react-native';
 
 
@@ -10,7 +10,7 @@ export const HamburguesMenu = () => {
     useEffect(()=>{
         navigation.setOptions({
             headerLeft:()=> {
-                <Pressable>
+                <Pressable onPress={()=> navigation.dispatch(DrawerActions.toggleDrawer())}>
                     <Text>Menu</Text>
                 </Pressable>;
             },
