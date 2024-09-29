@@ -18,9 +18,9 @@ export const DrawerNavigator = () => {
       drawerContent={(props)=> <CustomDrawer {...props}/>}
       screenOptions={{
         headerShown:false,
-        drawerType:(dimensions.width >= 758) ? 'permanent' :'slide' ,
+        drawerType:(dimensions.width >= 758) ? 'permanent' : 'slide' ,
         drawerActiveBackgroundColor:globalColors.primary,
-        drawerActiveTintColor:globalColors.primary,
+        drawerActiveTintColor:'white',
         drawerItemStyle:{
             borderRadius:100,
             paddingHorizontal:20,
