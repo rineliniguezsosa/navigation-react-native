@@ -3,3 +3,4 @@ export * from './product/ProductsScreen';
 export * from './settings/SettingScreen';
 export * from './product/ProductScreen';
 export * from './profile/ProfileScreen';
+export * from './tabs/Tab1Screen';
