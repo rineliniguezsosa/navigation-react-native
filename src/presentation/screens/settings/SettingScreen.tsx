@@ -2,7 +2,7 @@
 import React from 'react';
 import { View,Text } from 'react-native';
 import { globalStyles } from '../../styles/globalStyles';
-import { useNavigation } from '@react-navigation/native';
+import { StackActions, useNavigation } from '@react-navigation/native';
 import { PrimaryButton } from '../../components';
 
 
@@ -11,8 +11,10 @@ export const SettingScreen = () => {
   return (
     <View style={globalStyles.container}>
         <Text style={{marginBottom:10}}>SettingScreen</Text>
-
+        {/* return back */}
         <PrimaryButton label="Regresar" onPress={()=> navigation.goBack()}/>
+        {/* return Home */}
+        <PrimaryButton label="Regresar al Home" onPress={()=> navigation.dispatch(StackActions.popToTop())}/>
     </View>
   );
 };
