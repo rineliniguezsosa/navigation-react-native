@@ -2,10 +2,11 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { createDrawerNavigator,DrawerContentComponentProps,DrawerContentScrollView,DrawerItemList } from '@react-navigation/drawer';
-import { StackNavigator } from './StackNavigator';
+// import { StackNavigator } from './StackNavigator';
 import { ProfileScreen } from '../screens';
 import { globalColors } from '../styles/colors';
 import { useWindowDimensions, View } from 'react-native';
+import { BottomTabsNavigator } from './BottomTabsNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -27,7 +28,8 @@ export const DrawerNavigator = () => {
         },
       }}
     >
-      <Drawer.Screen name="StackNavigator " component={StackNavigator} />
+      {/* <Drawer.Screen name="StackNavigator " component={StackNavigator} /> */}
+      <Drawer.Screen name="BottomTabsNavigator" component={BottomTabsNavigator} />
       <Drawer.Screen name="ProfileScreen" component={ProfileScreen} />
     </Drawer.Navigator>
   );
