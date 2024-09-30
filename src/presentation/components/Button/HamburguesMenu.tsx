@@ -1,8 +1,10 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
-import { Pressable, Text } from 'react-native';
+import { Pressable } from 'react-native';
+import { IoniIcon } from '../../../assets';
 
 
 export const HamburguesMenu = () => {
@@ -11,8 +13,8 @@ export const HamburguesMenu = () => {
     useEffect(()=>{
         navigation.setOptions({
             headerLeft:()=> (
-                <Pressable onPress={()=> navigation.dispatch(DrawerActions.toggleDrawer())}>
-                    <Text>Menu</Text>
+                <Pressable style={{marginLeft:5}} onPress={()=> navigation.dispatch(DrawerActions.toggleDrawer())}>
+                    <IoniIcon name="menu-outline" />
                 </Pressable>
             ),
         });
