@@ -1,7 +1,7 @@
 import React from 'react';
 import { View,Text } from 'react-native';
 import { HamburguesMenu } from '../../components';
-import { IconRocektOutline } from '../../../assets';
+import { IoniIcon } from '../../../assets';
 
 export const Tab1Screen = () => {
   return (
@@ -9,7 +9,7 @@ export const Tab1Screen = () => {
         <HamburguesMenu/>
         <Text>Tab1Screen</Text>
 
-        <IconRocektOutline/>
+        <IoniIcon name="rocket-outline" color="red" size={20}/>
     </View>
   );
 };
