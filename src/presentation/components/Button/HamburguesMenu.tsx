@@ -14,7 +14,7 @@ export const HamburguesMenu = () => {
         navigation.setOptions({
             headerLeft:()=> (
                 <Pressable style={{marginLeft:5}} onPress={()=> navigation.dispatch(DrawerActions.toggleDrawer())}>
-                    <IoniIcon name="menu-outline" />
+                    <IoniIcon size={50} name="menu-outline" />
                 </Pressable>
             ),
         });
