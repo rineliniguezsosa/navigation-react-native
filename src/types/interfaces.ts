@@ -9,3 +9,9 @@ export type RootStackParamList = {
     ProductScreen: {id:number;name:string},
     SettingScreen: undefined,
 };
+
+export interface IoniIconProps {
+    name:string,
+    coior:string,
+    size:number,
+}
