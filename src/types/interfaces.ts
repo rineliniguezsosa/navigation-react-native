@@ -12,6 +12,6 @@ export type RootStackParamList = {
 
 export interface IoniIconProps {
     name:string,
-    color:string,
+    color?:string,
     size?:number,
 }
