@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
@@ -9,15 +10,12 @@ export const HamburguesMenu = () => {
 
     useEffect(()=>{
         navigation.setOptions({
-            headerLeft:()=> {
+            headerLeft:()=> (
                 <Pressable onPress={()=> navigation.dispatch(DrawerActions.toggleDrawer())}>
                     <Text>Menu</Text>
-                </Pressable>;
-            },
+                </Pressable>
+            ),
         });
     },[]);
-  return (
-    <>
-    </>
-  );
+  return (<></>);
 };
