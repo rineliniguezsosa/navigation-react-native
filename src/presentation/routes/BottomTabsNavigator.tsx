@@ -6,6 +6,7 @@ import { globalColors } from '../styles/colors';
 import { Text } from 'react-native';
 import { TopTabsNavigator } from './TopTabsNavigator';
 import { StackNavigator } from './StackNavigator';
+import { IoniIcon } from '../../assets';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,7 +32,7 @@ export const BottomTabsNavigator = () => {
     >
       <Tab.Screen name="Tab1Screen" options={{title:'Tab1',tabBarIcon:({color})=> <Text style={{color}}>Tab1</Text>}} component={Tab1Screen} />
       <Tab.Screen name="TopTabsNavigator" options={{title:'Tab2',tabBarIcon:({color})=> <Text style={{color}}>Tab2</Text>}} component={TopTabsNavigator} />
-      <Tab.Screen name="StackNavigator " options={{title:'Tab3',tabBarIcon:({color})=> <Text style={{color}}>Tab3</Text>}} component={StackNavigator} />
+      <Tab.Screen name="StackNavigator " options={{title:'Tab3',tabBarIcon:({color})=> <IoniIcon name="book-outline" color={color} size={20} />}} component={StackNavigator} />
     </Tab.Navigator>
   );
 };
