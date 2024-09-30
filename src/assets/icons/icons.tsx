@@ -1,5 +1,10 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { IoniIconProps } from '../../types/interfaces';
 
-export const IconRocektOutline = () => <Icon name="rocket-outline"/>;
-export const IconBookOutline = () => <Icon name="book-outline"/>;
+export const IoniIcon = ({name,coior,size}:IoniIconProps) =>{
+    return (
+        <Icon name={name} color={coior} size={size}/>
+    );
+};
+
