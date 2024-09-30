@@ -6,3 +6,5 @@ export * from './profile/ProfileScreen';
 export * from './tabs/Tab1Screen';
 export * from './tabs/Tab2Screen';
 export * from './tabs/Tab3Screen';
+export * from './about/AboutScreen';
+
